@@ -25,7 +25,7 @@ class Proxy extends EventProducer<ProxyEventMap>
         });
         this.ws.addEventListener("message", (e) => 
         {
-            alert(e.data);
+            //alert(e.data);
             let p = <IncomingPacket>JSON.parse(e.data);
             switch(p.type)
             {
