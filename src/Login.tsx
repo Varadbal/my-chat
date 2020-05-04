@@ -28,9 +28,7 @@ export class Login extends Component
                             this.setState({email: e}, () => {
                                 if(this.state.email == 'QMPDME')
                                 {
-                                    this.setState({displayName: "Balazs"}, () => {
-                                        this.forceUpdate(); //???
-                                    })
+                                    this.setState({displayName: "Balazs"});
                                 }
                             });
                         }); 

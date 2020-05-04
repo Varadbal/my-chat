@@ -1,4 +1,4 @@
-text-input {
+.text-input {
     position: relative;
     padding: 12px 0;
 }
@@ -6,7 +6,7 @@ text-input {
 .text-input input {
     width: 100%;
     padding: 6px 6px;
-    border: 1;  /*Intentionally modified*/
+    border: 0; 
     outline: none;
 }
 

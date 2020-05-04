@@ -10,7 +10,7 @@ export interface TextInputOptions
     onEnter?: () => void;
     autofocus?: boolean;
 }
-/*Intentionally modified ("" : "subsided")*/ 
+
 export class TextInput extends Component<TextInputOptions>
 {
     state = {value: this.props.value, focus: false};
@@ -42,11 +42,20 @@ export class TextInput extends Component<TextInputOptions>
                     {...attrs}
                 />
                 <div className="focus-indicator"></div>
-                <label className={this.state.value || this.state.focus ? "" : "subsided"}>  
+                <label className={this.state.value || this.state.focus ? "subsided" : ""}>  
                     {this.props.placeholder}
                 </label>
             </div>
         );
+    }
+
+    componentWillReceiveProps(props)
+    {
+        const {value} = this.props;
+        if(props.value !== this.state.value)
+        {
+            this.setState({value: props.value});
+        }
     }
     
 }
