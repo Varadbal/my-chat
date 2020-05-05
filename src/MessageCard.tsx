@@ -9,7 +9,7 @@ export class MessageCard extends PureComponent<{
     render()
     {
         return(
-            <div className={"message-card" + (this.props.own ? "own" : "")}>
+            <div className={"message-card" + (this.props.own ? " own" : "")}>
                 <div className="bubble">
                     <span className="text">{this.props.message.content}</span>
                     <span className="time">
